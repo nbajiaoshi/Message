@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/contact_avatar"
+        android:layout_width="@dimen/cell_item_contact_avatar_layout_width"
+        android:layout_height="@dimen/cell_item_contact_avatar_layout_height"
+        android:layout_centerVertical="true"
+        android:layout_margin="@dimen/cell_item_contact_avatar_layout_margin"
+        android:adjustViewBounds="true"
+        android:background="@drawable/chat_avatar_default_icon" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_toRightOf="@id/contact_avatar" 
+        android:gravity="center">
+
+	        <TextView
+	            android:id="@+id/title_name"
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"
+	            android:layout_alignParentTop = "true"
+	            android:layout_alignParentLeft = "true"
+	            android:text="title"
+	            android:singleLine="true"
+	            android:textAlignment="gravity"
+	            android:layout_toLeftOf="@+id/title_time"
+	            android:textSize="@dimen/cell_item_title_text_view_textSize"
+	            android:textStyle="bold" />
+
+	        <TextView
+	            android:id="@+id/title_time"
+	            android:layout_width="90dp"
+	            android:layout_height="wrap_content"
+	            android:layout_alignParentTop = "true"
+	            android:layout_alignParentRight = "true"
+	            android:singleLine="true"
+	            android:paddingLeft="@dimen/cell_item_title_text_view_paddingLeft"
+	            android:paddingRight="@dimen/cell_item_title_text_view_paddingRight"
+	            android:text="00:00:00"
+	            android:textAlignment="gravity"
+	            android:gravity="right"
+	            android:textSize="@dimen/cell_item_detail_text_view_textSize" />
+
+	        <TextView
+	            android:id="@+id/detail_content"
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"
+	            android:layout_alignParentBottom = "true"
+	            android:layout_alignParentLeft = "true"
+	            android:layout_toLeftOf="@+id/detail_content_num"
+	            android:layout_below="@+id/title_name"
+	            android:maxHeight="80dp"
+	            android:paddingLeft="@dimen/cell_item_detail_text_view_paddingLeft"
+	            android:paddingRight="@dimen/cell_item_detail_text_view_paddingRight"
+	            android:text="detail"	            
+	            android:maxLines="2"
+				android:ellipsize="end"
+	            android:textAlignment="gravity"
+	            android:textSize="@dimen/cell_item_detail_text_view_textSize" />
+
+	        <TextView
+	            android:id="@+id/detail_content_num"
+	            android:layout_width="30dp"
+	            android:layout_height="30dp"
+	            android:layout_alignParentRight = "true"
+	            android:layout_marginRight="30dp"
+	            android:layout_below="@+id/title_time"
+	            android:background="@drawable/message_status_unread"
+	            android:text="99"
+	            android:gravity="center"
+	            android:textAlignment="gravity"
+	            android:textSize="@dimen/cell_item_detail_text_view_textSize" />
+
+    </RelativeLayout>
+
+</RelativeLayout>
